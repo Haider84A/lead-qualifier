@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HomePro Dispatch | Fast Local US Home Repair &amp; Service Pros</title>
+  <meta name="description" content="Connect with licensed, local US pros for Plumbing, HVAC, Roofing, Appliance Repair, Garage Doors &amp; more. Free over-the-phone estimates and same-day dispatch." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Top Trust Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <span>🇺🇸 Serving Homeowners Nationwide Across the USA</span>
+      <span>•</span>
+      <span>24/7 Live Dispatch &amp; Free Phone Estimates</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="HomePro Dispatch Home">
+        <span class="logo-mark" aria-hidden="true">H</span>
+        <span class="logo-text" data-brand-name>HomePro Dispatch</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="tel:+18885550199" class="btn btn-call btn-sm" data-call-link>
+        <span class="phone-icon" aria-hidden="true">📞</span>
+        <span data-phone-display>(888) 555-0199</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero + Lead Qualifier -->
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="badge">
+            <span class="dot"></span>
+            Local Technicians Available Today
+          </div>
+          <h1 id="hero-headline">Need a Trusted Local Home Service Pro Fast?</h1>
+          <p class="hero-sub" id="hero-sub">
+            Connect directly by phone with vetted local contractors for <strong>Plumbing, HVAC, Roofing, Appliance Repair</strong>, and more. Free quotes — no obligation.
+          </p>
+
+          <ul class="hero-points">
+            <li><span class="check">✓</span> Same-day &amp; 24/7 emergency availability</li>
+            <li><span class="check">✓</span> Licensed &amp; insured local technicians</li>
+            <li><span class="check">✓</span> Direct phone connection — zero waiting for emails</li>
+          </ul>
+
+          <div class="hero-direct-cta">
+            <a href="tel:+18885550199" class="btn btn-call btn-lg" data-call-link>
+              <span aria-hidden="true">📞</span>
+              Call Local Dispatch: <span data-phone-display>(888) 555-0199</span>
+            </a>
+            <p class="cta-note">Free call • Speak directly with a local service specialist</p>
+          </div>
+        </div>
+
+        <!-- 3-Step Lead Qualifier Card -->
+        <div class="qualifier-card" id="qualifier">
+          <div class="qualifier-header">
+            <span class="step-pill" id="step-indicator">Step 1 of 3</span>
+            <h2>Check Local Availability</h2>
+            <p>Answer 3 quick questions to connect with the right local pro.</p>
+          </div>
+
+          <div class="progress-track" aria-hidden="true">
+            <div class="progress-fill" id="progress-fill" style="width: 33%;"></div>
+          </div>
+
+          <!-- Step 1: Select Service -->
+          <div class="q-step active" data-step="1">
+            <label class="q-label">1. What service do you need?</label>
+            <div class="service-options" role="radiogroup" aria-label="Select a home service">
+              <button type="button" class="option-btn" data-service="plumbing" data-label="Plumbing">🔧 Plumbing</button>
+              <button type="button" class="option-btn" data-service="hvac" data-label="HVAC & AC Repair">❄️ HVAC / AC</button>
+              <button type="button" class="option-btn" data-service="roofing" data-label="Roofing">🏠 Roofing</button>
+              <button type="button" class="option-btn" data-service="appliance" data-label="Appliance Repair">🧺 Appliance Repair</button>
+              <button type="button" class="option-btn" data-service="garage" data-label="Garage Door Repair">🚗 Garage Door</button>
+              <button type="button" class="option-btn" data-service="water" data-label="Water Damage">💧 Water Damage</button>
+              <button type="button" class="option-btn" data-service="electrical" data-label="Electrical">⚡ Electrical</button>
+              <button type="button" class="option-btn" data-service="pest" data-label="Pest Control">🛡️ Pest Control</button>
+            </div>
+          </div>
+
+          <!-- Step 2: Enter US ZIP Code -->
+          <div class="q-step" data-step="2">
+            <label for="zip-input" class="q-label">2. Enter your 5-digit US ZIP code</label>
+            <p class="q-hint">We match you with a technician who serves your exact neighborhood.</p>
+            <input
+              type="text"
+              id="zip-input"
+              class="text-input"
+              inputmode="numeric"
+              maxlength="5"
+              placeholder="e.g. 43215"
+              autocomplete="postal-code"
+            />
+            <p class="error-msg" id="zip-error" role="alert"></p>
+            <div class="q-actions">
+              <button type="button" class="btn btn-outline" id="back-to-1">← Back</button>
+              <button type="button" class="btn btn-primary" id="next-to-3">Continue →</button>
+            </div>
+          </div>
+
+          <!-- Step 3: Urgency & Homeowner Check -->
+          <div class="q-step" data-step="3">
+            <label class="q-label">3. How soon do you need service?</label>
+            <div class="urgency-options">
+              <button type="button" class="urgency-btn" data-urgency="Emergency / Today">🚨 Emergency (Today)</button>
+              <button type="button" class="urgency-btn" data-urgency="Within 24–48 Hours">📅 Within 24–48 Hours</button>
+              <button type="button" class="urgency-btn" data-urgency="This Week / Free Quote">💬 This Week / Need a Quote</button>
+            </div>
+            <div class="q-actions">
+              <button type="button" class="btn btn-outline" id="back-to-2">← Back</button>
+            </div>
+          </div>
+
+          <!-- Result: Ready to Call -->
+          <div class="q-step" data-step="4">
+            <div class="match-box">
+              <div class="match-icon">✓</div>
+              <h3>Local Pro Available!</h3>
+              <p class="match-summary" id="match-summary">
+                We have a local specialist ready for your request.
+              </p>
+              <a href="tel:+18885550199" class="btn btn-call btn-block btn-lg" id="result-call-btn" data-call-link>
+                📞 Call Now: <span data-phone-display>(888) 555-0199</span>
+              </a>
+              <p class="match-tip">
+                Tip: Mention your ZIP code (<strong id="summary-zip"></strong>) when connected for the fastest quote.
+              </p>
+              <button type="button" class="link-reset" id="reset-qualifier">Start Over</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Metrics Strip -->
+    <section class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <strong>24/7</strong>
+          <span>Live Phone Dispatch</span>
+        </div>
+        <div class="trust-item">
+          <strong>50 States</strong>
+          <span>Nationwide US Coverage</span>
+        </div>
+        <div class="trust-item">
+          <strong>100% Free</strong>
+          <span>No-Obligation Call</span>
+        </div>
+        <div class="trust-item">
+          <strong>Fast</strong>
+          <span>Same-Day Service Slots</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <h2>Home Services We Connect You With</h2>
+          <p>Click any service below to check availability in your ZIP code and get connected immediately.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="service-card">
+            <div class="card-icon">🔧</div>
+            <h3>Plumbing Services</h3>
+            <p>Burst pipes, clogged drains, water heater repair &amp; replacement, leak detection, and emergency plumbing.</p>
+            <button type="button" class="card-cta" data-pick-service="plumbing" data-pick-label="Plumbing">Get Plumbing Quote →</button>
+          </article>
+
+          <article class="service-card">
+            <div class="card-icon">❄️</div>
+            <h3>HVAC &amp; AC Repair</h3>
+            <p>AC not cooling, furnace repair, seasonal tune-ups, thermostat issues, and full heating &amp; cooling installs.</p>
+            <button type="button" class="card-cta" data-pick-service="hvac" data-pick-label="HVAC & AC Repair">Get HVAC Quote →</button>
+          </article>
+
+          <article class="service-card">
+            <div class="card-icon">🏠</div>
+            <h3>Roofing Repair &amp; Replacement</h3>
+            <p>Roof leaks, missing shingles, storm &amp; hail damage inspections, and full residential roof replacements.</p>
+            <button type="button" class="card-cta" data-pick-service="roofing" data-pick-label="Roofing">Get Roofing Quote →</button>
+          </article>
+
+          <article class="service-card">
+            <div class="card-icon">🧺</div>
+            <h3>Appliance Repair</h3>
+            <p>Fast repair for refrigerators, washers, dryers, dishwashers, ovens, and major home appliances.</p>
+            <button type="button" class="card-cta" data-pick-service="appliance" data-pick-label="Appliance Repair">Get Appliance Quote →</button>
+          </article>
+
+          <article class="service-card">
+            <div class="card-icon">🚗</div>
+            <h3>Garage Door Repair</h3>
+            <p>Broken springs, off-track doors, opener replacement, cable repair, and new garage door installation.</p>
+            <button type="button" class="card-cta" data-pick-service="garage" data-pick-label="Garage Door Repair">Get Garage Quote →</button>
+          </article>
+
+          <article class="service-card">
+            <div class="card-icon">💧</div>
+            <h3>Water Damage Restoration</h3>
+            <p>24/7 emergency water extraction, flood cleanup, structural drying, and mold prevention specialists.</p>
+            <button type="button" class="card-cta" data-pick-service="water" data-pick-label="Water Damage">Get Emergency Help →</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section section-alt" id="how-it-works">
+      <div class="container">
+        <div class="section-head">
+          <h2>How It Works in 3 Simple Steps</h2>
+          <p>No long forms or waiting days for callbacks. Speak with a local pro in under 60 seconds.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <span class="step-num">1</span>
+            <h3>Choose Your Service</h3>
+            <p>Select the repair or project you need and enter your 5-digit US ZIP code above.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">2</span>
+            <h3>Call Our Local Line</h3>
+            <p>Tap the call button to connect directly with our live dispatch team for your area.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">3</span>
+            <h3>Get a Free Estimate</h3>
+            <p>Discuss your job directly with a local technician and schedule service at your convenience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container faq-wrap">
+        <div class="section-head">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <details class="faq-item" open>
+          <summary>Is there any cost to call and get a quote?</summary>
+          <p>No. Calling our dispatch line to get matched with a local home service contractor and discuss your project is 100% free with no obligation to hire.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How fast can a local technician come out?</summary>
+          <p>For urgent issues like plumbing leaks, AC breakdowns, or water damage, same-day or emergency dispatch is often available depending on your ZIP code.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What areas do you serve?</summary>
+          <p>Our network connects homeowners across major cities and surrounding suburbs throughout the United States. Enter your ZIP code above to check local availability.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Bottom Call Banner -->
+    <section class="cta-banner">
+      <div class="container cta-banner-inner">
+        <div>
+          <h2>Ready to Speak With a Local Pro?</h2>
+          <p>Call now for immediate local availability and a free phone estimate.</p>
+        </div>
+        <a href="tel:+18885550199" class="btn btn-call btn-lg" data-call-link>
+          📞 Call <span data-phone-display>(888) 555-0199</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer with Required Lead-Gen / Referral Disclosure -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <strong data-brand-name>HomePro Dispatch</strong>
+          <p class="footer-meta">Connecting US homeowners with local home service professionals.</p>
+        </div>
+        <div class="footer-contact">
+          <a href="tel:+18885550199" data-call-link data-phone-display>(888) 555-0199</a>
+          <span>•</span>
+          <a href="mailto:support@homeprodispatch.com" id="support-email-link">support@homeprodispatch.com</a>
+        </div>
+      </div>
+
+      <p class="disclaimer">
+        <strong>Disclosure:</strong> <span data-brand-name>HomePro Dispatch</span> is a free referral service that helps connect homeowners with local, independent third-party service providers. All contractors are independent and <span data-brand-name>HomePro Dispatch</span> does not warrant or guarantee any work performed. It is the responsibility of the homeowner to verify that the hired contractor furnishes the necessary license and insurance required for the work being performed.
+      </p>
+
+      <p class="copyright">
+        © <span id="year"></span> <span data-brand-name>HomePro Dispatch</span>. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky Call Bar -->
+  <div class="mobile-call-bar">
+    <a href="tel:+18885550199" class="btn btn-call btn-block" data-call-link>
+      📞 Tap to Call Local Pro: <span data-phone-display>(888) 555-0199</span>
+    </a>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
